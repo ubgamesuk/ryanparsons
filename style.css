@@ -7,13 +7,24 @@
     }
 
 
-@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet');
-    .prata-regular {
-    font-family: "Prata", serif;
-    font-weight: 400;
-    font-style: normal;
-    }
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet');
+    .libre-baskerville-regular {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
+.libre-baskerville-bold {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.libre-baskerville-regular-italic {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: italic;
+}
 :root{
     --sidebar-color: #0f0f0f;
     --primary-color: #171717;
@@ -86,13 +97,17 @@ a{
     animation-fill-mode: forwards;
 }
 .banner .bannertext{
-    font-size: 50px;
+    font-size: 55px;
     color: #fff;
-    line-height: 57px;
+    line-height: 59px;
     letter-spacing: -0.9px;
     font-family: 'Prata';
     font-weight: 500;
     transition: ease 0.5s;
+}
+.banner .bannertext i{
+    font-family: 'Libre Baskerville';
+    font-size: 50px;
 }
 .banner .bannerbutton{
     font-size: 25px;
@@ -183,6 +198,9 @@ a{
     text-decoration: none;
     color: #000;
 }
+.footer h1{
+    font-size: 30px;
+}
 .subtitle{
     font-size: 29px;
     margin-bottom: 10px;
@@ -202,15 +220,22 @@ h2{
 }
 @media screen and (min-width: 600px) {
     .banner{
-        height: 350px;
+        height: 340px;
         width: 100%;
-        text-align: left;
+        text-align: center;
+    }
+    .banner button{
+        cursor: pointer;
     }
     .banner .bannercontent{
-        margin-top: 20px;
+        margin-top: 15px;
+        width: 100%;
     }
     .banner .bannertext{
         font-size: 70px;
-        line-height: 78px;
+        line-height: 70px;
+    }
+    .banner .bannertext i{
+        font-size: 60px;
     }
 }
