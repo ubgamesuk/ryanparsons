@@ -1,30 +1,3 @@
-@import url('link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet');
-    .plus-jakarta-sans {
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    }
-
-
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet');
-    .libre-baskerville-regular {
-  font-family: "Libre Baskerville", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.libre-baskerville-bold {
-  font-family: "Libre Baskerville", serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.libre-baskerville-regular-italic {
-  font-family: "Libre Baskerville", serif;
-  font-weight: 400;
-  font-style: italic;
-}
 :root{
     --sidebar-color: #0f0f0f;
     --primary-color: #171717;
@@ -44,7 +17,7 @@
 }
 @keyframes slideInFromLeft {
     0% {
-      transform: translatey(-60px);
+      transform: translatey(-50px);
       opacity: 0;
     }
     100% {
@@ -63,9 +36,6 @@
 body{
     background-color: #f3f3f3;
 }
-.content{
-    margin: 30px;
-}
 .page{
     margin-top: 80px;
 }
@@ -74,44 +44,34 @@ a{
     color: #000;
 }
 .banner{
-    text-align: center;
-    height: 400px;
+    height: 350px;
     transition: ease 0.5s;
-    display: inline-block;
     overflow: hidden;
     position: relative;
-}
-.banner .backgroundimg{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    pointer-events: none;
-    z-index: -1;
-    filter: brightness(70%);
+    background-image: url('images/bannerimage.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.432);
+    background-blend-mode: darken;
 }
 .banner .bannercontent{
-    padding: 70px;
+    padding: 50px;
     position: absolute;
-    top: 0;
+    bottom: 0;
     animation: slideInFromLeft ease 1.5s;
     animation-fill-mode: forwards;
 }
 .banner .bannertext{
-    font-size: 55px;
+    font-size: 70px;
     color: #fff;
-    line-height: 59px;
+    line-height: 69px;
     letter-spacing: -0.9px;
-    font-family: 'Prata';
-    font-weight: 500;
+    font-weight: 600;
     transition: ease 0.5s;
 }
-.banner .bannertext i{
-    font-family: 'Libre Baskerville';
-    font-size: 50px;
-}
 .banner .bannerbutton{
-    font-size: 25px;
-    margin-top: 20px;
+    font-size: 22px;
+    margin-top: 28px;
     border: none;
     padding: 11px;
     color: #000;
@@ -129,7 +89,7 @@ a{
     margin-left: 10px;
 }
 .navigationmenu{
-    background-color: #876841;
+    background-color: #00719a;
     position: fixed;
     height: 230px;
     padding: 20px;
@@ -163,12 +123,12 @@ a{
     width: 100%;
     z-index: 999;
     position: fixed;
-    text-align: center;
+    text-align: left;
     background-color: #fff;
 }
 .topbar .toplogo{
     height: 100%;
-    padding: 7px;
+    padding: 12px;
     cursor: pointer;
 }
 .topbar .menuicon{
@@ -178,14 +138,15 @@ a{
     margin-top: 15px;
     margin-right: 25px;
     font-size: 40px;
-    color: #9a6100;
+    color: #00719a;
+    cursor: pointer;
 }
 .footer{
     padding: 30px;
     background-color: #fff;
 }
 .footer .footerlogo{
-    height: 25px;
+    height: 50px;
     transform: translateX(-3px);
     margin-bottom: 10px;
 }
@@ -203,26 +164,56 @@ a{
 }
 .subtitle{
     font-size: 29px;
-    margin-bottom: 10px;
+    padding: 20px;
+    border-bottom: 1px solid #ababab;
+    background-color: #fff;
+}
+.socialpagebutton{
+    width: calc(100% - 30px);
+    margin: 15px;
+    background-color: #fff;
+    outline: 1px solid #c8c8c8;
+    border-radius: 15px;
+    border: none;
+    padding: 90px;
+    font-size: 30px;
+    transition: ease 0.5s;
+}
+.socialpagebutton:hover{
+    transform: scale(1.02);
+    outline: 2px solid #0077ff;
 }
 p{
-    font-size: 20px;
+    font-size: 1.3em;
+    padding: 20px;
+    line-height: 1.8rem;
 }
 h2{
-    margin-top: 5px;
     font-size: 23px;
-    font-weight: 400;
+    padding-left: 25px;
+    font-weight: 600;
 }
-.map{
-    width: 100%;
-    height: 300px;
+.footerlink{
+    font-weight: 500;
+    padding: 0px;
+}
+.columns{
+    display: flex;
+    margin: 20px;
+    padding: 6px;
+    outline: 1px solid #bdbdbd;
+    border-radius: 18px;
+    height: 100%;
+    background-color: #fff;
+}
+.columnimg{
+    width: 230px;
     border-radius: 15px;
+    object-fit: cover;
 }
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 600px) {
     .banner{
-        height: 340px;
         width: 100%;
-        text-align: center;
     }
     .banner button{
         cursor: pointer;
@@ -232,10 +223,29 @@ h2{
         width: 100%;
     }
     .banner .bannertext{
-        font-size: 70px;
-        line-height: 70px;
+        font-size: 60px;
+        line-height: 60px;
     }
     .banner .bannertext i{
         font-size: 60px;
     }
+    .columns{
+        display: block;
+    }
+    .columnimg{
+        width: 100%;
+        height: 300px;
+    }
+    .columnimgleft{
+    height: 500px;
+    width: 230px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+.columnimgright{
+    height: 270px;
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+}
 }
