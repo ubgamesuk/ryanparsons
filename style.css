@@ -171,7 +171,9 @@ a{
 .socialpagebutton{
     width: calc(100% - 30px);
     margin: 15px;
+    font-weight: 500;
     background-color: #fff;
+    color: #000;
     outline: 1px solid #c8c8c8;
     border-radius: 15px;
     border: none;
