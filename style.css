@@ -43,6 +43,27 @@ a{
     text-decoration: none;
     color: #000;
 }
+.surveybtn{
+    width: calc(100% - 40px);
+    margin: 20px;
+    border: none;
+    border-radius: 15px;
+    color: #000;
+    background-color: #ffffff;
+    font-size: 23px;
+    padding: 20px;
+    font-weight: 500;
+    outline: 1px solid #bebebe;
+    transition: 0.3s ease;
+}
+.surveybtn:hover{
+    background-color: #dbdbdb;
+    cursor: pointer;
+}
+.surveybtn i{
+    margin-right: 10px;
+    transform: scale(1.1) translateY(1px);
+}
 .banner{
     height: 350px;
     transition: ease 0.5s;
@@ -201,7 +222,9 @@ h2{
 }
 .columns{
     display: flex;
-    margin: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
     padding: 6px;
     outline: 1px solid #bdbdbd;
     border-radius: 18px;
